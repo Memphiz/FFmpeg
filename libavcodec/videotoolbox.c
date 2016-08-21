@@ -673,7 +673,8 @@ AVVideotoolboxContext *av_videotoolbox_alloc_context(void)
 
     if (ret) {
         ret->output_callback = videotoolbox_decoder_callback;
-        ret->cv_pix_fmt_type = kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange;
+        //ret->cv_pix_fmt_type = kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange;
+        ret->cv_pix_fmt_type = kCVPixelFormatType_422YpCbCr8;
     }
 
     return ret;
